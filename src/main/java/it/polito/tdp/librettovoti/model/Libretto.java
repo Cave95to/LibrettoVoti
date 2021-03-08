@@ -32,6 +32,14 @@ public class Libretto {
 		return l;
 	}
 
+	public Voto ricercaCorso(String nomeCorso) {
+		for (Voto v : this.voti) {
+			if (nomeCorso.equals(v.getNomeCorso()))
+				return v;
+		}
+		return null;
+	}
+
 	
 	
 

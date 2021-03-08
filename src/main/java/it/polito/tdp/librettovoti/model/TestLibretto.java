@@ -23,14 +23,16 @@ public class TestLibretto {
 		libretto.add(voto4);
 		libretto.add(voto5);
 		
-		System.out.println("Voti inseriti \n");
+		System.out.println("- Voti inseriti: \n");
 		System.out.println(libretto);
 		
 		Libretto venticinque = libretto.LibrettoVotiUguali(25);
-		System.out.println("Voti pari a 25 \n");
+		System.out.println("- Voti pari a 25: \n");
 		System.out.println(venticinque);
 		
-		
+		Voto v = libretto.ricercaCorso("Analisi 3");
+		System.out.println("- Ricerca voto per nome esame: \n");
+		System.out.println(v);
 		
 	}
 
