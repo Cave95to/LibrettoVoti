@@ -7,7 +7,7 @@ public class TestLibretto {
 	public static void main(String[] args) {
 		
 		
-		System.out.println("Test sui libretti");
+		System.out.println("Test sui libretti \n");
 		
 		Libretto libretto = new Libretto();
 		
@@ -23,7 +23,13 @@ public class TestLibretto {
 		libretto.add(voto4);
 		libretto.add(voto5);
 		
+		System.out.println("Voti inseriti \n");
 		System.out.println(libretto);
+		
+		Libretto venticinque = libretto.LibrettoVotiUguali(25);
+		System.out.println("Voti pari a 25 \n");
+		System.out.println(venticinque);
+		
 		
 		
 	}

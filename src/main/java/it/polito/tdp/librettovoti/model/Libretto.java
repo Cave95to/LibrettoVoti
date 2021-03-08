@@ -23,6 +23,15 @@ public class Libretto {
 		return s;
 	}
 
+	public Libretto LibrettoVotiUguali(int i) {
+		Libretto l = new Libretto();
+		for ( Voto v : this.voti) {
+			if (v.getVoto()==i)
+				l.add(v);
+		}
+		return l;
+	}
+
 	
 	
 
