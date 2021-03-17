@@ -31,9 +31,19 @@ public class TestLibretto {
 		System.out.println(venticinque);
 		
 		Voto v = libretto.ricercaCorso("Analisi 3");
-		System.out.println("- Ricerca voto per nome esame: \n");
+		System.out.println("- Ricerca voto per nome esame Analisi 3: \n");
 		System.out.println(v);
 		
+		System.out.println("\n- Ricerca voti duplicati o conflitti: \n");
+		
+		Voto analisi = libretto.ricercaCorso("Analisi 1");
+		
+		Voto analisi_doppio = new Voto("Analisi 1", 30, LocalDate.of(2019, 2, 25));
+		Voto analisi_conflitto = new Voto("Analisi 1", 28, LocalDate.of(2019, 2, 25));
+		System.out.println(analisi + " doppione di " + analisi_doppio + "? -> "+ libretto.esisteDuplicato(analisi_doppio));
+		System.out.println(analisi + " doppione di " + analisi_conflitto + "? -> "+ libretto.esisteDuplicato(analisi_conflitto));
+		System.out.println(analisi + " conflitto di " + analisi_doppio + "? -> "+ libretto.esisteConflitto(analisi_doppio));
+		System.out.println(analisi + " conflitto di " + analisi_conflitto + "? -> "+ libretto.esisteConflitto(analisi_conflitto));
 	}
 
 }
